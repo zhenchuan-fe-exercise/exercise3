@@ -7,4 +7,4 @@ install:
   - npm install
 
 script:
-  - karma start --singleRun
+  - karma start --single-run
