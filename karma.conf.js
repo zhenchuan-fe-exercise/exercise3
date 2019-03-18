@@ -16,7 +16,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       'jquery.min.js',
-      'node_modules/should/should.js', 
+      'node_modules/should/should.js',
       'test/**.js'
     ],
 
@@ -57,7 +57,14 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    // browsers: ['Chrome'],
+    browsers: ['Chrome_travis_ci'],
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
 
 
     // Continuous Integration mode
